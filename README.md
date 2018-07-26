@@ -1,2 +1,3 @@
-# wc-file-link
-`&lt;wc-file-link>` web component
+# &lt;file-link&gt;
+
+`<file-link>` web component

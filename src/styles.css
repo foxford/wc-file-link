@@ -1,0 +1,69 @@
+.wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  border: solid 1px #d4d4d4;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition: box-shadow 0.2s ease;
+}
+.wrapper:hover,
+.wrapper:active {
+  box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+.info .icon {
+  width: 34px;
+  height: 44px;
+  margin-right: 24px;
+  position: relative;
+  background: transparent url('./images/file.svg') top left no-repeat;
+}
+.info .icon .extension {
+  padding: 2px 4px;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  background: #48a1e6 url('./images/file.svg') top left no-repeat;
+  border-radius: 2px;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.info .data .name {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #48a1e6;
+  text-decoration: underline;
+}
+.info .data .size {
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #b8b8b8;
+  text-transform: uppercase;
+}
+.download {
+  width: 16px;
+  height: 16px;
+  background: transparent url('./images/download.svg') top left no-repeat;
+}
+.wrapper:hover .download {
+  background: transparent url('./images/download-hover.svg') top left no-repeat;
+}
+.wrapper:active .download {
+  background: transparent url('./images/download-active.svg') top left no-repeat;
+}
