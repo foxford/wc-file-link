@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FileLink demonstration</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .wrapper {
+      clear: both;
+    }
+    .container {
+      width: 480px;
+      height: 480px;
+      margin-right: 40px;
+      float: left;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="container">
+    <file-link
+      id="fl"
+      label="robohash-avatar"
+      url="https://robohash.org/nihilveritatisfugit.png?size=64x64&set=set1"
+    ></file-link>
+  </div>
+  <div class="container">
+    <form id="form1">
+      <label for="label">
+        <span>Label: <input id="label" type="text" placeholder="Insert label here"></span>
+      </label>
+      <br>
+      <label for="url">
+        <span>Url: <input id="url" type="text" placeholder="Insert url here"></span>
+      </label>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.7/core.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.0.2/custom-elements-es5-adapter.js"></script>
+<script src="dist/file-link.js"></script>
+<script>
+  var fl = document.getElementById('fl')
+  var label = document.getElementById('label')
+  var url = document.getElementById('url')
+
+  label.addEventListener('input', function (e) {
+    fl.setAttribute('label', e.target.value)
+  })
+  url.addEventListener('input', function (e) {
+    fl.setAttribute('url', e.target.value)
+  })
+</script>
+</body>
+</html>
