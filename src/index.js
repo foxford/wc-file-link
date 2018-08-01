@@ -1,5 +1,6 @@
 import { LitElement, html } from '@polymer/lit-element'
 import prettyBytes from 'pretty-bytes'
+import mime from 'mime'
 
 class FileLink extends LitElement {
   static get properties () {
@@ -32,7 +33,7 @@ class FileLink extends LitElement {
 
       return {
         size: parseInt(headers.get('content-length')),
-        type: headers.get('content-type').split(';')[0].split('/')[1]
+        type: mime.getExtension(headers.get('content-type'))
       }
     })
   }
