@@ -1,11 +1,10 @@
 .wrapper {
   width: 100%;
   background-color: #ffffff;
-  border: solid 1px #d4d4d4;
+  border: solid 1px #e9e9e9;
   border-radius: 5px;
   cursor: pointer;
   user-select: none;
-  transition: box-shadow 0.2s ease;
 }
 .wrapper:hover,
 .wrapper:active {
@@ -46,8 +45,11 @@
   font-size: 16px;
   font-weight: bold;
   line-height: 1.5;
-  color: #48a1e6;
-  text-decoration: underline;
+  color: #333333;
+}
+.wrapper:hover .info .data .name,
+.wrapper:active .info .data .name {
+  color: #48A1E6;
 }
 .info .data .size {
   font-family: inherit;
