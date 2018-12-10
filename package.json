@@ -1,6 +1,6 @@
 {
   "name": "@netology-group/wc-file-link",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "`file-link` web component",
   "keywords": [],
   "license": "MIT",
@@ -10,7 +10,7 @@
     "es"
   ],
   "main": "dist/file-link.js",
-  "module": "es/file-list.js",
+  "module": "es/file-link.js",
   "directories": {
     "lib": "src"
   },
