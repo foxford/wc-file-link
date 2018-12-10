@@ -43,20 +43,30 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.5.7/core.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.0.2/webcomponents-bundle.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.0.2/custom-elements-es5-adapter.js"></script>
-<script src="dist/file-link.js"></script>
-<script>
-  var fl = document.getElementById('fl')
-  var label = document.getElementById('label')
-  var url = document.getElementById('url')
 
-  label.addEventListener('input', function (e) {
-    fl.setAttribute('label', e.target.value)
-  })
-  url.addEventListener('input', function (e) {
-    fl.setAttribute('url', e.target.value)
-  })
+<script>if (!window.customElements) { document.write('<!--'); }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.1.2/custom-elements-es5-adapter.js"></script>
+<!--! do not remove -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/2.1.2/webcomponents-bundle.js"></script>
+
+<script src="./dist/file-link.js"></script>
+<script>
+  function initialize(){
+    var fl = document.getElementById('fl')
+    var label = document.getElementById('label')
+    var url = document.getElementById('url')
+
+    window.customElements.define('file-link', WCFileLink.FileLink)
+
+    label.addEventListener('input', function (e) {
+      fl.setAttribute('label', e.target.value)
+    })
+    url.addEventListener('input', function (e) {
+      fl.setAttribute('url', e.target.value)
+    })
+  }
+
+  window.document.addEventListener('WebComponentsReady', initialize)
 </script>
 </body>
 </html>
