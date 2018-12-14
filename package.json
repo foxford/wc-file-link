@@ -1,6 +1,6 @@
 {
   "name": "@netology-group/wc-file-link",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "`file-link` web component",
   "keywords": [],
   "license": "MIT",
@@ -10,7 +10,7 @@
     "es"
   ],
   "main": "dist/file-link.js",
-  "module": "es/file-list.js",
+  "module": "es/file-link.js",
   "directories": {
     "lib": "src"
   },
@@ -21,6 +21,7 @@
     "build:es": "cross-env BABEL_ENV=es babel --copy-files src -d es",
     "build:umd:min": "cross-env BABEL_ENV=umd webpack --mode production",
     "demo": "http-server",
+    "prepublishOnly": "npm run build",
     "start": "npm run demo"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
   },
   "devDependencies": {
     "autoprefixer": "~9.0.0",
+    "babel-cli": "^6.26.0",
     "babel-core": "~6.26.3",
     "babel-loader": "~7.1.4",
     "babel-plugin-annotate-pure-calls": "^0.4.0",
